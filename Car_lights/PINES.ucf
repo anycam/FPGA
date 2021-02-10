@@ -1,0 +1,13 @@
+net clk loc = e7;
+net reset loc = j3;
+
+net izq_in loc = l1;
+net der_in loc = m8;
+net inter_in loc = n2;
+net rever_in loc = p5;
+net stop_in loc = r7;
+
+net izq_led loc = l2;
+net der_led loc = n9;
+net rever_led loc = r9;
+net stop_led loc = r8;

@@ -1,0 +1,27 @@
+xst -intstyle ise -ifn "C:/Proyectos ISE/CURSO_ONLINE/SEMA/SEMA.xst" -ofn "C:/Proyectos ISE/CURSO_ONLINE/SEMA/SEMA.syr" 
+xst -intstyle ise -ifn "C:/Proyectos ISE/CURSO_ONLINE/SEMA/SEMA.xst" -ofn "C:/Proyectos ISE/CURSO_ONLINE/SEMA/SEMA.syr" 
+xst -intstyle ise -ifn "C:/Proyectos ISE/CURSO_ONLINE/SEMA/SEMA.xst" -ofn "C:/Proyectos ISE/CURSO_ONLINE/SEMA/SEMA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-csg225-2 "SEMA.ngc" SEMA.ngd  
+map -intstyle ise -p xc6slx9-csg225-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SEMA_map.ncd SEMA.ngd SEMA.pcf 
+par -w -intstyle ise -ol high -mt off SEMA_map.ncd SEMA.ncd SEMA.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml SEMA.twx SEMA.ncd -o SEMA.twr SEMA.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PINES.ucf -p xc6slx9-csg225-2 "SEMA.ngc" SEMA.ngd  
+map -intstyle ise -p xc6slx9-csg225-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SEMA_map.ncd SEMA.ngd SEMA.pcf 
+par -w -intstyle ise -ol high -mt off SEMA_map.ncd SEMA.ncd SEMA.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml SEMA.twx SEMA.ncd -o SEMA.twr SEMA.pcf -ucf PINES.ucf 
+bitgen -intstyle ise -f SEMA.ut SEMA.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PINES.ucf -p xc6slx9-csg225-2 "SEMA.ngc" SEMA.ngd  
+map -intstyle ise -p xc6slx9-csg225-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SEMA_map.ncd SEMA.ngd SEMA.pcf 
+par -w -intstyle ise -ol high -mt off SEMA_map.ncd SEMA.ncd SEMA.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml SEMA.twx SEMA.ncd -o SEMA.twr SEMA.pcf -ucf PINES.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PINES.ucf -p xc6slx9-csg225-2 "SEMA.ngc" SEMA.ngd  
+map -intstyle ise -p xc6slx9-csg225-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SEMA_map.ncd SEMA.ngd SEMA.pcf 
+par -w -intstyle ise -ol high -mt off SEMA_map.ncd SEMA.ncd SEMA.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml SEMA.twx SEMA.ncd -o SEMA.twr SEMA.pcf -ucf PINES.ucf 
+bitgen -intstyle ise -f SEMA.ut SEMA.ncd 
+xst -intstyle ise -ifn "C:/Proyectos ISE/CURSO_ONLINE/SEMA/SEMA.xst" -ofn "C:/Proyectos ISE/CURSO_ONLINE/SEMA/SEMA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PINES.ucf -p xc6slx9-csg225-2 "SEMA.ngc" SEMA.ngd  
+map -intstyle ise -p xc6slx9-csg225-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SEMA_map.ncd SEMA.ngd SEMA.pcf 
+par -w -intstyle ise -ol high -mt off SEMA_map.ncd SEMA.ncd SEMA.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml SEMA.twx SEMA.ncd -o SEMA.twr SEMA.pcf -ucf PINES.ucf 
+bitgen -intstyle ise -f SEMA.ut SEMA.ncd 

@@ -1,0 +1,6 @@
+net clk loc = E7;
+net reset loc = J3;
+
+net ro loc = R8;
+net am loc = R8,R9,N8;
+net ve loc = R9;

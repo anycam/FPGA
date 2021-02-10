@@ -1,0 +1,500 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: SEMA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SEMA.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SEMA"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-csg225
+
+---- Source Options
+Top Module Name                    : SEMA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Proyectos ISE\CURSO_ONLINE\SEMA\SEMA.vhd" into library work
+Parsing entity <SEMA>.
+Parsing architecture <Behavioral> of entity <sema>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SEMA> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SEMA>.
+    Related source file is "C:\Proyectos ISE\CURSO_ONLINE\SEMA\SEMA.vhd".
+    Found 26-bit register for signal <CONT_R>.
+    Found 26-bit register for signal <CONT_AM>.
+    Found 26-bit register for signal <CONT_V>.
+    Found 25-bit register for signal <CONT_V2>.
+    Found 4-bit register for signal <EDO_PRE>.
+    Found 20-bit register for signal <CONT_RES>.
+    Found 1-bit register for signal <Mem_Res>.
+    Found 1-bit register for signal <Mem_R>.
+    Found 1-bit register for signal <Mem_V>.
+    Found 1-bit register for signal <Mem_Am>.
+    Found 1-bit register for signal <Mem_V2>.
+    Found finite state machine <FSM_0> for signal <EDO_PRE>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | r                                              |
+    | Power Up State     | r                                              |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 20-bit adder for signal <CONT_RES[19]_GND_3_o_add_13_OUT> created at line 249.
+    Found 26-bit adder for signal <CONT_R[25]_GND_3_o_add_16_OUT> created at line 264.
+    Found 26-bit adder for signal <CONT_V[25]_GND_3_o_add_19_OUT> created at line 278.
+    Found 26-bit adder for signal <CONT_AM[25]_GND_3_o_add_22_OUT> created at line 292.
+    Found 25-bit adder for signal <CONT_V2[24]_GND_3_o_add_25_OUT> created at line 306.
+    Found 25-bit comparator lessequal for signal <n0025> created at line 299
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred 128 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <SEMA> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 20-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 26-bit adder                                          : 3
+# Registers                                            : 10
+ 1-bit register                                        : 5
+ 20-bit register                                       : 1
+ 25-bit register                                       : 1
+ 26-bit register                                       : 3
+# Comparators                                          : 1
+ 25-bit comparator lessequal                           : 1
+# Multiplexers                                         : 5
+ 20-bit 2-to-1 multiplexer                             : 1
+ 25-bit 2-to-1 multiplexer                             : 1
+ 26-bit 2-to-1 multiplexer                             : 3
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <SEMA>.
+The following registers are absorbed into counter <CONT_AM>: 1 register on signal <CONT_AM>.
+The following registers are absorbed into counter <CONT_R>: 1 register on signal <CONT_R>.
+The following registers are absorbed into counter <CONT_V>: 1 register on signal <CONT_V>.
+The following registers are absorbed into counter <CONT_V2>: 1 register on signal <CONT_V2>.
+The following registers are absorbed into counter <CONT_RES>: 1 register on signal <CONT_RES>.
+Unit <SEMA> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 5
+ 20-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+ 26-bit up counter                                     : 3
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+# Comparators                                          : 1
+ 25-bit comparator lessequal                           : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <EDO_PRE[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ r     | 0000
+ a     | 0001
+ b     | 0010
+ c     | 0011
+ d     | 0100
+ e     | 0101
+ f     | 0110
+ g     | 0111
+ h     | 1000
+-------------------
+
+Optimizing unit <SEMA> ...
+WARNING:Xst:1293 - FF/Latch <CONT_V2_24> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_23> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_22> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_21> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_20> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_19> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_18> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_17> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_16> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_15> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_14> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_13> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_12> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_11> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_10> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_9> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_8> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_7> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_6> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_5> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_4> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_3> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_2> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_1> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CONT_V2_0> has a constant value of 0 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mem_V2> (without init value) has a constant value of 1 in block <SEMA>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <CONT_R_10> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_10> <CONT_V_10> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_11> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_11> <CONT_V_11> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_12> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_12> <CONT_V_12> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_13> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_13> <CONT_V_13> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_14> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_14> <CONT_V_14> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_15> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_15> <CONT_V_15> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_20> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_20> <CONT_V_20> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_0> in Unit <SEMA> is equivalent to the following 3 FFs/Latches, which will be removed : <CONT_AM_0> <CONT_RES_0> <CONT_V_0> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_21> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_21> <CONT_V_21> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_16> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_16> <CONT_V_16> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_1> in Unit <SEMA> is equivalent to the following 3 FFs/Latches, which will be removed : <CONT_AM_1> <CONT_RES_1> <CONT_V_1> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_22> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_22> <CONT_V_22> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_17> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_17> <CONT_V_17> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_2> in Unit <SEMA> is equivalent to the following 3 FFs/Latches, which will be removed : <CONT_AM_2> <CONT_RES_2> <CONT_V_2> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_23> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_23> <CONT_V_23> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_18> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_18> <CONT_V_18> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_3> in Unit <SEMA> is equivalent to the following 3 FFs/Latches, which will be removed : <CONT_AM_3> <CONT_RES_3> <CONT_V_3> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_24> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_24> <CONT_V_24> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_19> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_19> <CONT_V_19> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_4> in Unit <SEMA> is equivalent to the following 3 FFs/Latches, which will be removed : <CONT_AM_4> <CONT_RES_4> <CONT_V_4> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_25> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_25> <CONT_V_25> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_5> in Unit <SEMA> is equivalent to the following 3 FFs/Latches, which will be removed : <CONT_AM_5> <CONT_RES_5> <CONT_V_5> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_6> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_6> <CONT_V_6> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_7> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_7> <CONT_V_7> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_8> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_8> <CONT_V_8> 
+INFO:Xst:2261 - The FF/Latch <CONT_R_9> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <CONT_AM_9> <CONT_V_9> 
+INFO:Xst:2261 - The FF/Latch <Mem_R> in Unit <SEMA> is equivalent to the following 2 FFs/Latches, which will be removed : <Mem_V> <Mem_Am> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SEMA, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 46
+ Flip-Flops                                            : 46
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SEMA.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 188
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 44
+#      LUT2                        : 26
+#      LUT3                        : 3
+#      LUT4                        : 1
+#      LUT5                        : 2
+#      LUT6                        : 23
+#      MUXCY                       : 44
+#      VCC                         : 1
+#      XORCY                       : 40
+# FlipFlops/Latches                : 46
+#      FDC                         : 44
+#      FDE                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 1
+#      OBUF                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg225-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              46  out of  11440     0%  
+ Number of Slice LUTs:                  102  out of   5720     1%  
+    Number used as Logic:               102  out of   5720     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    102
+   Number with an unused Flip Flop:      56  out of    102    54%  
+   Number with an unused LUT:             0  out of    102     0%  
+   Number of fully used LUT-FF pairs:    46  out of    102    45%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    160     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 46    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.918ns (Maximum Frequency: 203.335MHz)
+   Minimum input arrival time before clock: 4.346ns
+   Maximum output required time after clock: 5.457ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.918ns (frequency: 203.335MHz)
+  Total number of paths / destination ports: 1560 / 46
+-------------------------------------------------------------------------
+Delay:               4.918ns (Levels of Logic = 3)
+  Source:            CONT_R_1 (FF)
+  Destination:       CONT_R_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: CONT_R_1 to CONT_R_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.525   1.221  CONT_R_1 (CONT_R_1)
+     LUT6:I0->O           17   0.254   1.209  PWR_3_o_CONT_R[25]_equal_16_o<25>3 (PWR_3_o_CONT_RES[19]_equal_13_o<19>1)
+     LUT6:I5->O           14   0.254   1.127  PWR_3_o_CONT_R[25]_equal_16_o<25>5 (PWR_3_o_CONT_R[25]_equal_16_o)
+     LUT2:I1->O            1   0.254   0.000  Mcount_CONT_R_eqn_01 (Mcount_CONT_R_eqn_0)
+     FDC:D                     0.074          CONT_R_0
+    ----------------------------------------
+    Total                      4.918ns (1.361ns logic, 3.557ns route)
+                                       (27.7% logic, 72.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 46 / 46
+-------------------------------------------------------------------------
+Offset:              4.346ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Mem_R (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to Mem_R
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            45   1.328   1.736  reset_IBUF (reset_IBUF)
+     INV:I->O              2   0.255   0.725  reset_inv1_INV_0 (reset_inv)
+     FDE:CE                    0.302          Mem_R
+    ----------------------------------------
+    Total                      4.346ns (1.885ns logic, 2.461ns route)
+                                       (43.4% logic, 56.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 7 / 3
+-------------------------------------------------------------------------
+Offset:              5.457ns (Levels of Logic = 2)
+  Source:            EDO_PRE_FSM_FFd4 (FF)
+  Destination:       Ro (PAD)
+  Source Clock:      clk rising
+
+  Data Path: EDO_PRE_FSM_FFd4 to Ro
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.525   1.104  EDO_PRE_FSM_FFd4 (EDO_PRE_FSM_FFd4)
+     LUT3:I0->O            1   0.235   0.681  EDO_PRE__n0100<1>1 (Ve_OBUF)
+     OBUF:I->O                 2.912          Ve_OBUF (Ve)
+    ----------------------------------------
+    Total                      5.457ns (3.672ns logic, 1.785ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.918|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.54 secs
+ 
+--> 
+
+Total memory usage is 4494372 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :   27 (   0 filtered)
+

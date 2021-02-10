@@ -1,0 +1,12 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri May 22 17:50:45 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "E7" LEVEL 1;
+COMP "Am" LOCATE = SITE "R8" SITE "R9" SITE "N8" LEVEL 1;
+COMP "Ve" LOCATE = SITE "R9" LEVEL 1;
+COMP "Ro" LOCATE = SITE "R8" LEVEL 1;
+COMP "reset" LOCATE = SITE "J3" LEVEL 1;
+SCHEMATIC END;
+

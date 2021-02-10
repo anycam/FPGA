@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Dec 22 20:03:20 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "stop_in" LOCATE = SITE "R7" LEVEL 1;
+COMP "clk" LOCATE = SITE "E7" LEVEL 1;
+COMP "der_led" LOCATE = SITE "N9" LEVEL 1;
+COMP "izq_in" LOCATE = SITE "L1" LEVEL 1;
+COMP "inter_in" LOCATE = SITE "N2" LEVEL 1;
+COMP "der_in" LOCATE = SITE "M8" LEVEL 1;
+COMP "reset" LOCATE = SITE "J3" LEVEL 1;
+COMP "rever_in" LOCATE = SITE "P5" LEVEL 1;
+COMP "izq_led" LOCATE = SITE "L2" LEVEL 1;
+COMP "stop_led" LOCATE = SITE "R8" LEVEL 1;
+COMP "rever_led" LOCATE = SITE "R9" LEVEL 1;
+SCHEMATIC END;
+
